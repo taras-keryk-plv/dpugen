@@ -56,6 +56,8 @@ class Enis(ConfBase):
                     'SAI_ENI_ATTR_OUTBOUND_V6_STAGE3_DASH_ACL_GROUP_ID', '0',
                     'SAI_ENI_ATTR_OUTBOUND_V6_STAGE4_DASH_ACL_GROUP_ID', '0',
                     'SAI_ENI_ATTR_OUTBOUND_V6_STAGE5_DASH_ACL_GROUP_ID', '0',
+                    "SAI_ENI_ATTR_V4_METER_POLICY_ID", "0",
+                    "SAI_ENI_ATTR_V6_METER_POLICY_ID", "0",
                 ]
             }
             for nsg_index in range(1, (p.ACL_NSG_COUNT + 1)):
