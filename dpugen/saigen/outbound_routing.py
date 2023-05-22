@@ -57,7 +57,9 @@ class OutboundRouting(ConfBase):
                                     },
                                     'attributes': [
                                         'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_ACTION', 'SAI_OUTBOUND_ROUTING_ENTRY_ACTION_ROUTE_VNET',
-                                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_DST_VNET_ID', f'$vnet_#eni{eni}'
+                                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_DST_VNET_ID', f'$vnet_#eni{eni}',
+                                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_METER_POLICY_EN', 'True',
+                                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_METER_CLASS', '0'
                                     ]
                                 }
                                 added_route_count += 1
@@ -76,7 +78,9 @@ class OutboundRouting(ConfBase):
                                     'attributes': [
                                         'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_ACTION', 'SAI_OUTBOUND_ROUTING_ENTRY_ACTION_ROUTE_VNET_DIRECT',
                                         'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_DST_VNET_ID', f'$vnet_#eni{eni}',
-                                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_OVERLAY_IP', vtep_eni
+                                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_OVERLAY_IP', vtep_eni,
+                                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_METER_POLICY_EN', 'True',
+                                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_METER_CLASS', '0'
                                     ]
                                 }
                                 added_route_count += 1
@@ -99,7 +103,9 @@ class OutboundRouting(ConfBase):
                     },
                     'attributes': [
                         'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_ACTION', 'SAI_OUTBOUND_ROUTING_ENTRY_ACTION_ROUTE_VNET',
-                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_DST_VNET_ID', f'$vnet_#eni{eni}'
+                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_DST_VNET_ID', f'$vnet_#eni{eni}',
+                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_METER_POLICY_EN', 'True',
+                        'SAI_OUTBOUND_ROUTING_ENTRY_ATTR_METER_CLASS', '0'
                     ]
                 }
 
